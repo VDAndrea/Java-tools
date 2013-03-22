@@ -1,3 +1,3 @@
 Java Tools
 ===============
-This repository contains java based utilities such as a web browser launcher  and bonus sourcecode for a temp folder cleaning batch file/bash script.
+This repository contains a java based utility  that searches for installed web browsers and launches the most modern one found. It is written to be compatible with Windows XP.
