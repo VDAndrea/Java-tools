@@ -12,7 +12,7 @@ public class launcher {
 			//attempts run internet explorer
 			try{
 				Runtime rt = Runtime.getRuntime();  
-				Process p = rt.exec("C:/Program Files/Internet Explorer/IEXPLORE.EXE");  ;
+				Process p = rt.exec("C:\Program Files\Internet Explorer\IEXPLORE.EXE");  ;
 			 } catch (FileNotFoundException e) {
 			    System.err.println("FileNotFoundException: " + e.getMessage());
 			    throw new Exception(e);
@@ -23,8 +23,7 @@ public class launcher {
 			//attempts to run firefox
 				try{
 					Runtime rt = Runtime.getRuntime();  
-					Process p = rt.exec("C:/Program Files/Internet Explorer/IEXPLORE.EXE");  
-			}catch (FileNotFoundException e) {
+					Process p = rt.exec("C:\Program Files\Mozilla Firefox\firefox.exe"); ;
 			    System.err.println("FileNotFoundException: " + e.getMessage());
 			    throw new Exception(e);
 
@@ -34,7 +33,7 @@ public class launcher {
 			//attempts to run chrome
 				try{
 					Runtime rt = Runtime.getRuntime();  
-					Process p = rt.exec("C:/Program Files/Internet Explorer/IEXPLORE.EXE");  
+					Process p = rt.exec("chrome.exe");  
 			}catch (FileNotFoundException e) {
 			    System.err.println("FileNotFoundException: " + e.getMessage());
 			    throw new Exception(e);
