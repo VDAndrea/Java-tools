@@ -1,7 +1,6 @@
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-
 public class launcher {
 
 	/**
@@ -9,38 +8,46 @@ public class launcher {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-			//attempts run internet explorer
-			try{
-				Runtime rt = Runtime.getRuntime();  
-				Process p = rt.exec("C:\Program Files\Internet Explorer\IEXPLORE.EXE");  ;
-			 } catch (FileNotFoundException e) {
-			    System.err.println("FileNotFoundException: " + e.getMessage());
-			    throw new Exception(e);
-				
-			} catch (IOException e) {
-			    System.err.println("Caught IOException: " + e.getMessage());
-			}{
-			//attempts to run firefox
-				try{
+		
+				boolean run = true;
+				if(run==true)
+					{ 
+				//attempt to run Internet Explorer
+						try{
 					Runtime rt = Runtime.getRuntime();  
-					Process p = rt.exec("C:\Program Files\Mozilla Firefox\firefox.exe"); ;
-			    System.err.println("FileNotFoundException: " + e.getMessage());
-			    throw new Exception(e);
+					Process p = rt.exec("C:/Program Files/Internet Explorer/IEXPLORE.EXE");  ;
+				 } catch (FileNotFoundException e) {
+				    System.err.println("FileNotFoundException: " + e.getMessage());
+				    throw new Exception(e);
+					
+				} catch (IOException e) {
+				    System.err.println("Caught IOException: " + e.getMessage());
+				}}else {
+				//attempt to run Mozilla Firefox
+					try{
+						Runtime rt = Runtime.getRuntime();  
+						Process p = rt.exec("C:/Program Files/Internet Explorer/IEXPLORE.EXE");  
+				}catch (FileNotFoundException e) {
+				    System.err.println("FileNotFoundException: " + e.getMessage());
+				    throw new Exception(e);
 
-			} catch (IOException e) {
-			    System.err.println("Caught IOException: " + e.getMessage());} 
-			}else{
-			//attempts to run chrome
-				try{
-					Runtime rt = Runtime.getRuntime();  
-					Process p = rt.exec("chrome.exe");  
-			}catch (FileNotFoundException e) {
-			    System.err.println("FileNotFoundException: " + e.getMessage());
-			    throw new Exception(e);
+				} catch (IOException e) {
+				    System.err.println("Caught IOException: " + e.getMessage());} 
+				} else {
+				//attempt to run Google Chrome
+					try{
+						Runtime rt = Runtime.getRuntime();  
+						Process p = rt.exec("C:/Program Files/Internet Explorer/IEXPLORE.EXE");  
+				}catch (FileNotFoundException e) {
+				    System.err.println("FileNotFoundException: " + e.getMessage());
+				    throw new Exception(e);
 
-			} catch (IOException e) {
-			    System.err.println("Caught IOException: " + e.getMessage());} }	
-				}
+				} catch (IOException e) {
+				    System.err.println("Caught IOException: " + e.getMessage());} }	
+			}
+
+		}
+
 	}
 
-
+}
